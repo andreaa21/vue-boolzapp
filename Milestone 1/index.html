@@ -13,21 +13,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>boolzapp</title>
 </head>
 <body>
-    <div class="main-wrapper">
+    <div id="app" class="main-wrapper">
         <div class="container">
             <div class="chat-left">
                 <div class="section-top">
                     <div class="user">
                         <div class="user-img">
-                            <img src="./assets/img/avatar_io.jpg" alt="io">
+                            <img :src="user.userImage" alt="io">
                         </div>
                         <div class="user-name">
                             <span>
-                                Sofia
+                                {{user.userName}}
                             </span>
                         </div>
                     </div>
@@ -59,14 +63,16 @@
                 <div class="chat-section">
                     <div class="chat-list">
                         <ul>
-                            <li class="chat-item">
+                            <li
+                            v-for="contact in contacts"
+                            class="chat-item">
                                 <div class="user-img">
-                                    <img src="./assets/img/avatar_io.jpg" alt="io">
+                                    <img :src="contact.image" :alt="contact.nome">
                                 </div>
                                 <div class="user-text">
                                     <div class="user-name">
                                         <span>
-                                            Sofia
+                                            {{contact.nome}}
                                         </span>
                                     </div>
                                     <div class="user-lastmsg">
@@ -86,9 +92,10 @@
             </div>
             <div class="chat-right">
                 <div class="section-top">
-                    <div class="user">
+                    <div
+                    class="user">
                         <div class="user-img">
-                            <img src="./assets/img/avatar_io.jpg" alt="io">
+                            <img src="./assets/img/avatar_io.jpg" alt="nome">
                         </div>
                         <div class="user-text">
                             <div class="user-name">

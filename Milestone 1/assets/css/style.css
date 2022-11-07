@@ -139,7 +139,7 @@ input:focus{
     align-items: center;
     height: 70px;
     padding: .5rem;
-
+    cursor: pointer;
 }
 .chat-item:hover{
     background-color: lightgray;
@@ -209,6 +209,7 @@ input:focus{
 }
 .chat-area .chat-container{
     width: 80%;
+    padding: 1rem;
 }
 .chat-container .msg-container{
     width: 100%;
