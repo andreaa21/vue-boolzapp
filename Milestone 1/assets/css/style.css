@@ -21,6 +21,9 @@ input{
     text-indent: 10px;
     border: none;
 }
+input:focus{
+    outline: none;
+}
 
 .main-wrapper{
     width: 100%;
@@ -141,6 +144,10 @@ input{
 .chat-item:hover{
     background-color: lightgray;
 }
+.chat-item .user-img{
+    padding-left: 10px;
+    padding-top: 5px;
+}
 .chat-item img{
     width: 60px;
 }
@@ -194,8 +201,46 @@ input{
     display: flex;
 }
 .section-mid .chat-area{
-    width: calc(100% - 15px);
+    width: 100%;
     background-image: url(../img/mine.jpg);
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+}
+.chat-area .chat-container{
+    width: 80%;
+}
+.chat-container .msg-container{
+    width: 100%;
+    height: 50px;
+}
+.chat-container .message{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    width: 200px;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+.chat-container .message .time{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 5px;
+}
+.message .time span{
+    font-size: .5rem;
+    color: grey;
+}
+
+.chat-container .sent{
+    float: right;
+    background-color: greenyellow;
+}
+.chat-container .received{
+    float: left;
+    background-color: white;
 }
 
 
