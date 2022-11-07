@@ -18,7 +18,7 @@ img{
     border-radius: 50%;
 }
 input{
-    width: 70%;
+    width: 80%;
     height: 70%;
     border-radius: 10px;
     border: none;
@@ -71,8 +71,12 @@ input{
     background-color: lightgray;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 30px;
+}
+.chat-right .section-bottom i{
+    color: rgb(112, 112, 112);
+    font-size: 1.2rem;
 }
 .chat-right .chat-area{
     height: calc(100% - 120px);
@@ -91,17 +95,21 @@ input{
 .section-top .user{
     display: flex;
     align-items: center;
-    padding-left: 5px;
+    padding-left: .5rem;
+}
+.section-top .user-access span{
+    font-size: .7rem;
+    color: rgb(112, 112, 112);
 }
 .section-top .user span{
-    margin-left: 5px;
+    margin-left: .8rem;
 }
 .section-top .options{
     margin-right: 10px;
 }
 .section-top .options i{
     padding: 0 10px;
-    color: grey;
+    color: rgb(112, 112, 112);
     cursor: pointer;
 }
 
