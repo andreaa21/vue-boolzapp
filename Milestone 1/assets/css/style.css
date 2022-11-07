@@ -64,7 +64,6 @@ input{
 }
 .chat-right{
     width: 65%;
-    background-color: brown;
 }
 .chat-right .section-bottom{
     height: 60px;
@@ -78,9 +77,29 @@ input{
     color: rgb(112, 112, 112);
     font-size: 1.2rem;
 }
-.chat-right .chat-area{
+.chat-right .section-mid{
     height: calc(100% - 120px);
+    display: flex;
+}
+.section-mid .chat-area{
+    width: calc(100% - 15px);
     background-image: url(../img/mine.jpg);
+}
+
+
+.scroll-area{
+    width: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: .6rem 0;
+}
+.scroll-area i{
+    font-size: .6rem;
+    color: rgb(112, 112, 112);
+
 }
 
 .section-top{
