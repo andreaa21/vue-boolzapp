@@ -3,3 +3,131 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.debug{
+    background-color: rgba(255, 0, 0, .25);
+    border: 1px solid black;
+}
+
+img{
+    width: 40px;
+    border-radius: 50%;
+}
+input{
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    border: none;
+    text-indent: 10px;
+}
+
+.main-wrapper{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(
+        #009688 0%,
+        #009688 20%,
+        #dadbd3 20%,
+        #dadbd3 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 80%;
+    height: 90vh;
+    display: flex;
+}
+
+.chat-left{
+    width: 35%;
+    background-color: white;
+}
+.chat-left .section-top{
+    border-right: 2px solid grey;
+}
+.chat-left .notif-section{
+    width: 100%;
+    height: 70px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+.chat-left .chat-list{
+    height: calc(100% - 130px);
+}
+.chat-right{
+    width: 65%;
+    background-color: brown;
+}
+.chat-right .section-bottom{
+    height: 60px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.chat-right .chat-area{
+    height: calc(100% - 120px);
+    background-image: url(../img/mine.jpg);
+}
+
+.section-top{
+    width: 100%;
+    height: 60px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+.section-top .user{
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+.section-top .user span{
+    margin-left: 5px;
+}
+.section-top .options{
+    margin-right: 10px;
+}
+.section-top .options i{
+    padding: 0 10px;
+    color: grey;
+    cursor: pointer;
+}
+
+
+.notif-section .notif-img{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+}
+.notif-section .notif-img .fa-bell-slash{
+    color: aqua;
+}
+.notif-section .notif-text{
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+    padding-left: 5px;
+}
+.notif-section .notif-text a{
+    font-size: .7rem;
+    color: black; /* da cambiare*/
+}
+
+
