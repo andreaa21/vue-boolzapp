@@ -167,7 +167,7 @@ createApp({
                         message: 'OK!!',
                         status: 'received'
                         }
-                        ],
+                        ]
                     }
             ],
             contactId: 0,

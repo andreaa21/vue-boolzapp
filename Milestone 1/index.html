@@ -125,13 +125,15 @@
                         <div
                         class="chat-container">
                             <div
+                            v-for="(msg) in contacts[contactId].messages"
                             class="msg-container">
-                                <div class="message sent">
-                                    <div class="text">
-                                        <span>
-                                            ciao
-                                        </span>
-                                    </div>
+                                <div 
+                                class="message"
+                                :class="msg.status"
+                                >
+                                        <p>
+                                            {{msg.message}}
+                                        </p>
                                     <div class="time">
                                         <span>
                                             1
@@ -139,21 +141,6 @@
                                     </div>
                                    </div>
                             </div>
-                            <div class="msg-container">
-                                <div class="message received">
-                                    <div class="text">
-                                        <span>
-                                            ehi
-                                    </div>
-                                    <div class="time">
-                                        <span>
-                                            12:00
-                                        </span>
-                                    </div>
-                                   </div>
-                            </div>
-                            
-
                         </div>
                     </div>
                 </div>
