@@ -11,7 +11,7 @@ createApp({
                 {
                     name: 'Michele',
                     avatar: '_1',
-                    visible: true,
+                    visible: false,
                     messages: [
                         {
                         date: '10/01/2020 15:30:55',
@@ -170,12 +170,13 @@ createApp({
                         ],
                     }
             ],
-            contactCounter: 0
+            contactId: 0,
         }
     },
     methods: {
         changeContact(index){
-            this.contactCounter = index;
+            this.contactId = index;
+            this.visible = !this.visible
         }
     }
 }).mount('#app')

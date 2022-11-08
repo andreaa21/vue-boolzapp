@@ -66,7 +66,7 @@
                             <li
                             v-for="(contact,index) in contacts"
                             @click="changeContact(index)"
-                            :class="{active : index === contactCounter}"
+                            :class="{active : index === contactId}"
                             class="chat-item">
                                 <div class="user-img">
                                     <img :src="`./assets/img/avatar${contact.avatar}.jpg`" :alt="contact.name">
@@ -97,12 +97,14 @@
                     <div
                     class="user">
                         <div class="user-img">
-                            <img src="./assets/img/avatar_io.jpg" alt="nome">
+                           <img 
+                           :src="`./assets/img/avatar${contacts[contactId].avatar}.jpg` "
+                           alt="">
                         </div>
                         <div class="user-text">
                             <div class="user-name">
                                 <span>
-                                    Sofia
+                                    {{contacts[contactId].name}}
                                 </span>
                             </div>
                             <div class="user-access">
@@ -120,13 +122,14 @@
                 </div>
                 <div class="section-mid">
                     <div class="chat-area">
-                        <div 
+                        <div
                         class="chat-container">
-                            <div class="msg-container">
+                            <div
+                            class="msg-container">
                                 <div class="message sent">
                                     <div class="text">
                                         <span>
-                                            cioa
+                                            ciao
                                         </span>
                                     </div>
                                     <div class="time">
