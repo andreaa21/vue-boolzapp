@@ -171,7 +171,8 @@ createApp({
                     }
             ],
             contactId: 0,
-            newMessageString: ''
+            newMessageString: '',
+            contactAnswer: 'ok!'
         }
     },
     methods: {
@@ -187,6 +188,15 @@ createApp({
                 }
                 this.contacts[contactId].messages.push(newMsg);
                 this.newMessageString = '';
+                setTimeout(this.getAnswer(contactId), 1000)
+        },
+        getAnswer(contactId){
+            const answer =
+                {
+                    message: this.contactAnswer,
+                    status: 'received'
+                }
+                this.contacts[contactId].messages.push(answer);
         }
     }
 }).mount('#app')
