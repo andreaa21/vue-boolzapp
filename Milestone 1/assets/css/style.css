@@ -148,9 +148,9 @@ input:focus{
     padding-bottom: .8rem;
     border-bottom: 1px solid lightgray;
 }
-.chat-item:hover{
+/* .chat-item:hover{
     background-color: lightgray;
-}
+} */
 .chat-item .user-img{
     padding-left: 10px;
     padding-top: 5px;

@@ -64,9 +64,9 @@
                     <div class="chat-list">
                         <ul>
                             <li
-                            v-for="contact in contacts"
-                            :class="{active: visible}"
-                            @click="contact.visible = !contact.visible"
+                            v-for="(contact,index) in contacts"
+                            @click="changeContact(index)"
+                            :class="{active : index === contactCounter}"
                             class="chat-item">
                                 <div class="user-img">
                                     <img :src="`./assets/img/avatar${contact.avatar}.jpg`" :alt="contact.name">
@@ -120,17 +120,18 @@
                 </div>
                 <div class="section-mid">
                     <div class="chat-area">
-                        <div class="chat-container">
+                        <div 
+                        class="chat-container">
                             <div class="msg-container">
                                 <div class="message sent">
                                     <div class="text">
                                         <span>
-                                            ciao
+                                            cioa
                                         </span>
                                     </div>
                                     <div class="time">
                                         <span>
-                                            12:00
+                                            1
                                         </span>
                                     </div>
                                    </div>
