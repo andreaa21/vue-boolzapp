@@ -191,7 +191,7 @@ createApp({
         addNewMessage(contactId){
             const newMsg =
                 {
-                    date: 'momo',
+                    date: '',
                     message: this.newMessageString,
                     status: 'sent'
                 }
@@ -202,7 +202,7 @@ createApp({
         getAnswer(contactId){
             const answer =
                 {
-                    date: 'mo',
+                    date: '',
                     message: this.contactAnswer,
                     status: 'received'
                 }
