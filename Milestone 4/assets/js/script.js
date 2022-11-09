@@ -216,7 +216,7 @@ createApp({
         getDate(){
             let DateTime = luxon.DateTime
             const now = DateTime.now();
-            return now.toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
+            return now.setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
         }
     }
 }).mount('#app')
