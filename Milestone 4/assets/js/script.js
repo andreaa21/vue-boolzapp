@@ -173,7 +173,8 @@ createApp({
             contactId: 0,
             newMessageString: '',
             contactAnswer: 'ok!',
-            chatSearchValue: ''
+            chatSearchValue: '',
+            newMsgDate: 'getDate()'
         }
     },
     computed: {
@@ -190,12 +191,10 @@ createApp({
         },
         addNewMessage(contactId){
             if(this.newMessageString != ''){
-                    let msgDate = '';
-                    let currentDate = new Date();
-                    msgDate = currentDate.toLocaleDateString()
+                this.newMsgDate = this.getDate();
                     const newMsg =
                 {
-                    date: msgDate,
+                    date: this.newMsgDate,
                     message: this.newMessageString,
                     status: 'sent'
                 }
@@ -205,16 +204,19 @@ createApp({
             }
         },
         getAnswer(contactId){
-            let msgDate = '';
-            let currentDate = new Date();
-            msgDate = currentDate.toLocaleDateString()
+            this.newMsgDate = this.getDate()
             const answer =
                 {
-                    date: msgDate,
+                    date: this.newMsgDate,
                     message: this.contactAnswer,
                     status: 'received'
                 }
                 this.contacts[contactId].messages.push(answer);
+        },
+        getDate(){
+            let DateTime = luxon.DateTime
+            const now = DateTime.now();
+            return now.toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
         }
     }
 }).mount('#app')
