@@ -205,9 +205,12 @@ createApp({
             }
         },
         getAnswer(contactId){
+            let msgDate = '';
+            let currentDate = new Date();
+            msgDate = currentDate.toLocaleDateString()
             const answer =
                 {
-                    date: '',
+                    date: msgDate,
                     message: this.contactAnswer,
                     status: 'received'
                 }
