@@ -189,15 +189,20 @@ createApp({
             this.visible = !this.visible
         },
         addNewMessage(contactId){
-            const newMsg =
+            if(this.newMessageString != ''){
+                    let msgDate = '';
+                    let currentDate = new Date();
+                    msgDate = currentDate.toLocaleDateString()
+                    const newMsg =
                 {
-                    date: '',
+                    date: msgDate,
                     message: this.newMessageString,
                     status: 'sent'
                 }
                 this.contacts[contactId].messages.push(newMsg);
                 this.newMessageString = '';
                 setTimeout(this.getAnswer(contactId), 1000)
+            }
         },
         getAnswer(contactId){
             const answer =
@@ -210,4 +215,7 @@ createApp({
         }
     }
 }).mount('#app')
+
+
+
 
