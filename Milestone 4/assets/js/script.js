@@ -172,7 +172,15 @@ createApp({
             ],
             contactId: 0,
             newMessageString: '',
-            contactAnswer: 'ok!'
+            contactAnswer: 'ok!',
+            chatSearchValue: ''
+        }
+    },
+    computed: {
+        filteredContacts: function(){
+            return this.contacts.filter((contact) => {
+                return contact.name.toLowerCase().includes(this.chatSearchValue)
+            });
         }
     },
     methods: {
@@ -183,6 +191,7 @@ createApp({
         addNewMessage(contactId){
             const newMsg =
                 {
+                    date: 'momo',
                     message: this.newMessageString,
                     status: 'sent'
                 }
@@ -193,6 +202,7 @@ createApp({
         getAnswer(contactId){
             const answer =
                 {
+                    date: 'mo',
                     message: this.contactAnswer,
                     status: 'received'
                 }

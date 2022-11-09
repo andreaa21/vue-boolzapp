@@ -57,14 +57,17 @@
                         <div class="input-img">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input 
+                        v-model="chatSearchValue"
+                        type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                 </div>
                 <div class="chat-section">
                     <div class="chat-list">
                         <ul>
                             <li
-                            v-for="(contact,index) in contacts"
+                            v-for="(contact,index) in filteredContacts"
+                            :key="index"
                             @click="changeContact(index)"
                             :class="{active : index === contactId}"
                             class="chat-item">

@@ -27,7 +27,7 @@ input:focus{
 
 
 .active{
-    background-color: brown;
+    background-color: lightgray;
 }
 
 .main-wrapper{
