@@ -200,7 +200,9 @@ createApp({
                 }
                 this.contacts[contactId].messages.push(newMsg);
                 this.newMessageString = '';
-                setTimeout(this.getAnswer(contactId), 1000)
+                setTimeout(()=>{
+                    this.getAnswer(contactId)
+                },1000)
             }
         },
         getAnswer(contactId){
@@ -217,6 +219,22 @@ createApp({
             let DateTime = luxon.DateTime
             const now = DateTime.now();
             return now.setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
+        },
+        // getHour(){
+        //     this.newMsgHour = this.getHour()
+        //     let DateTime = luxon.DateTime
+        //     const now = DateTime.now();
+        //     return now.setLocale('it').toLocaleString(DateTime.TIME_24_SIMPLE);
+        // }
+        getLastMessage(contact){
+            if(contact.messages.length > 0){
+                return contact.messages.at(-1).message;
+            }
+        },
+        getLastDate(contact){
+            if(contact.messages.length > 0){
+                return contact.messages.at(-1).date;
+            }
         }
     }
 }).mount('#app')
